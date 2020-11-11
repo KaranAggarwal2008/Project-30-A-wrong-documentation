@@ -24,8 +24,11 @@ class Box {
       }else{
         push()
         World.remove(world,this.body);
+          translate(this.body.position.x, this.body.position.y);
         this.visiblity=this.visiblity-5;
         tint(255,this.visiblity);
+        rectMode(CENTER);
+        rectangle(0,0,this.width,this.height);
         pop()
       }
     }
